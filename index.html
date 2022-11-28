@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <!-- Libreria (pluggin) para incluir archivos html -->
+    <script src="./src/assets/include-html.js"></script>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./src/index.css">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;200;300;400&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Incluimos el header -->
+    <div data-include="./src/assets/header.html"></div>
+    <main>
+        <section class="frontpage">
+            <div class="container image">
+                <div class="search_engine">
+                    <div class="container_search">
+                        <span>Search by city</span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-circle-xmark"></i>                      
+                        <input autocomplete="off" aria-autocomplete="none" type="text" id="search" placeholder="Search city" >
+                    </div>
+                    <div id="list_cities" class="container_list hidde">
+                        <ul></ul>
+                    </div>
+
+                </div>
+                <div class="container_card" id="container_card">
+                    <div class="card"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./src/index.js"></script>
+    <!-- <script src="./src/utils/search.js"></script> -->
+</body>
+
+</html>

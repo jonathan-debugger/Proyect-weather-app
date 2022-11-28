@@ -1,0 +1,1 @@
+//https://api.mymemory.translated.net/get?q=Hello%20kid%20bogota&langpair=en|es

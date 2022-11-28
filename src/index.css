@@ -1,0 +1,270 @@
+/**/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+  /* --mainBackgroundColor:linear-gradient(180deg, #0041A8 0%, #1D6FF2 99.99%, rgba(0, 65, 168, 0) 100%); */
+  --mainBackgroundColor: linear-gradient(180deg, #10172a 0%, #00324d 99.99%, rgba(0, 65, 168, 0) 100%);
+  --mainColor:#0041a8;  
+  --whiteColor: #fff;
+  --paddingMovil: 0 1.6rem 0 1.6rem;   
+  --fontSizeFrontPageMovil: 1.7rem;
+  --firstFontFamily: 'Raleway','san-serif';
+  --secondaryFontFamily: 'Roboto','san-serif';
+}
+body{
+    font-family: var(--firstFontFamily);
+}
+.header{    
+    background: linear-gradient(180deg, #000000b0, transparent);
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+.header nav{
+    display: none;
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding:var(--paddingMovil);
+}
+.header i{
+    font-size: 2.5rem;
+    color: var(--whiteColor);
+}
+.container.image{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding:var(--paddingMovil);
+}
+.frontpage >.image{
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.49),
+     rgba(0, 0, 0, 0.33)), url('./assets/img/portada3.jpg');
+    object-fit: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height:44.5rem;
+    height:100vh;
+    padding-top: 5.5rem;
+}
+.search_engine{
+    width: 100%;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    font-weight: 600;
+    color: var(--whiteColor);
+}
+
+.search_engine .container_search {
+    font-size: var(--fontSizeFrontPageMovil);
+    font-weight: 700;
+    position: relative;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+.search_engine .container_search span{
+    margin-bottom: .5rem;
+    display: inline-block;
+}
+.search_engine .container_search i{
+    color:var(--mainColor);
+    position: absolute;
+}
+.search_engine .container_search .fa-magnifying-glass {
+    font-size: 1.5rem;
+    bottom: 1.2rem;
+    left: 1rem;
+}
+i.fa-solid.fa-circle-xmark{
+    cursor: pointer;
+    right: 1.5rem;
+    bottom: 1.2rem;
+    font-size: 1.7rem;
+}
+.search_engine input{
+    width: 100%;
+    min-width: 26rem;
+    height: 4rem;
+    border: none;
+    border-radius: .5rem;
+    padding: 0 .5rem 0 3rem;
+    outline:0;
+}
+.container_list {
+    position: absolute;
+    z-index: 1;
+    background: var(--whiteColor);
+    padding: .6rem 0;
+    width: 100%;
+    max-width: 50rem;
+    color: black;
+    top: 6.6rem;
+    border-radius: 0 0 .5rem .5rem;
+    height: auto;
+    max-height: 15rem;
+    overflow-y: scroll;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.container_list ul li:hover {
+    background-color: #ededed;
+}
+.container_list ul {
+    list-style: none;
+}
+.container_list ul li {
+    font-size: 1.4rem;
+    font-weight:500;
+    padding: .5rem 1rem;
+}
+.container_card >p:last-of-type{
+    font-size: 1.6rem;
+    color: white;
+    margin-top: 2rem;    
+}
+
+.card{
+    width: 29rem;
+    height: 27rem;
+    margin-top: 1rem;
+    /* background: linear-gradient(180deg, #15192478 0%, #00304aa3 99.99%, rgba(0, 65, 168, 0) 100%); */
+    backdrop-filter: blur(3px);
+    background: #00324d7d;
+    box-shadow: .4rem .4rem 1rem 0px #000000a6;
+    border-radius: 1rem;
+    color: var(--whiteColor);
+    padding: 2.5rem 1rem;
+    display: none;
+}
+.card.card--show{
+    display: block;
+}
+.card .city{
+    font-size: 1.6rem;
+    width: 25rem;
+    font-weight: 200;
+    display: flex;
+    
+}
+.city i{
+    align-self: center;
+    font-size: 1.5rem;
+    /* display: none; */
+}
+.city strong {
+    padding-left: .6rem;
+}
+.card .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card .row:first-of-type{
+    align-items: center;
+}
+.card .city data{
+    display: flex;
+}
+.date p:last-child{
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0rem 0 0 2rem;
+    margin-top: 2rem;
+}
+.date p:last-child time{
+    display: block;    
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: .2rem;        
+}
+.date p time{
+    font-family: var(--secondaryFontFamily);
+}
+
+.degrees {
+    font-family: var(--secondaryFontFamily);
+    font-size: 3.2rem;
+    font-weight: 400;
+    position: absolute;
+    right: 3rem;
+    top: 6rem;
+    /* margin: 0rem 1.6rem 0 0; */
+}
+.degrees p span:last-of-type {
+    font-size: 2.3rem;
+}
+.variables{
+    padding: 3.5rem 0 0 2rem; 
+}
+
+.variables ul {
+    font-family: 'Roboto';
+    list-style: none;   
+    line-height: 1.7;
+}
+
+.variables ul li{
+    font-size: 1.3rem;
+}
+.variables ul li span:first-of-type {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+ .variables ul li span:last-of-type{
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+.weather_img {
+    width: 116px;
+    text-align: center;
+    margin-top: 1rem;
+} 
+.weater_img img {
+    width: auto;
+    /* margin-left: 2.6rem; */
+}
+.weather_img figcaption {
+    font-size: 1.3rem;
+}
+.hidde{
+    display: none;
+}
+.weater_img figcaption{
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    width: 12.5rem;
+}
+.weater_img figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width:760px) {
+    .header .container{
+        padding: 0 3.2rem 0 3.2rem;
+
+    }
+}

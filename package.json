@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "country-state-city": "^3.1.2",
+    "main":"index.js"
+  }
+}
