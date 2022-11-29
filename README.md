@@ -1,4 +1,4 @@
-# random-generator-string
+# Weather App of cities the world
 
 This is a javascript, php and mysql project which filters the current weather for all or most cities in the world.
 
